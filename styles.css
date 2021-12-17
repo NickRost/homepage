@@ -1,0 +1,299 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  background: linear-gradient(-35deg, #03001e, #7303c0, #ec38bc, #fdeff9);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+
+  --primary-text-color: #181820;
+  --secondary-text-color: #45457e;
+  --durability-text-color: #6a737d9c;
+  --icon-color: #6a737d;
+  --border-color: #df10c345;
+  --text-decoration-color: #e01fd7;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.glass {
+  background: rgb(255 255 255);
+  background:
+    linear-gradient(
+      to right bottom,
+      rgba(255 255 255 70%),
+      rgba(255 255 255 30%)
+    );
+  backdrop-filter: blur(2rem);
+  display: flex;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 30px;
+  max-width: 900px;
+}
+
+.fh {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.fv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.resume {
+  margin: 50px auto;
+  border: 1px solid #f5f5f5;
+  box-shadow: 1px 1px 7px 7px #f5f5f5;
+  padding: 30px 0;
+  max-width: 900px;
+  background: white;
+  background:
+    linear-gradient(
+      to right bottom,
+      rgba(255 255 255 / 70%),
+      rgba(255 255 255 / 30%)
+    );
+  backdrop-filter: blur(2rem);
+}
+
+.resume-block {
+  border-bottom: 3px solid var(--border-color);
+  padding-bottom: 30px;
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 576px) {
+  .main-info,
+  .contact-info-container {
+    flex-direction: column;
+  }
+
+  .contact-info-container {
+    align-items: center;
+  }
+
+  .contact-info-block:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .experiences {
+    margin-right: 0;
+  }
+}
+
+.contact-info-header,
+.contact-info-sub-header {
+  text-align: center;
+}
+
+.contact-info-header {
+  color: var(--primary-text-color);
+  margin-bottom: 15px;
+  text-decoration-color: var(--text-decoration-color);
+  text-decoration-line: underline;
+}
+
+.contact-info-sub-header {
+  color: var(--secondary-text-color);
+  margin-bottom: 30px;
+}
+
+.contact-info-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact-info-block-center {
+  justify-content: center;
+}
+
+.contact-info-item {
+  color: var(--secondary-text-color);
+  text-decoration: none;
+  display: flex;
+  justify-content: start;
+}
+
+.contact-info-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.contact-info-item-icon-wrapper {
+  margin-right: 10px;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-info-item-icon path {
+  fill: var(--icon-color);
+}
+
+.contact-info-item-icon {
+  height: 1.1428rem;
+  vertical-align: text-bottom;
+}
+
+.contact-info-avatar {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 3px solid;
+  border-color: var(--text-decoration-color);
+}
+
+.intro {
+  display: flex;
+  justify-content: start;
+}
+
+.intro-icon-wrapper {
+  margin-right: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.intro-icon {
+  height: 1.1428rem;
+  vertical-align: text-bottom;
+}
+
+.intro-icon path {
+  fill: var(--text-decoration-color);
+}
+
+.intro-text {
+  color: var(--secondary-text-color);
+  text-align: justify;
+}
+
+.skills-header {
+  color: var(--secondary-text-color);
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.skills-text {
+  color: var(--secondary-text-color);
+  text-align: justify;
+}
+
+.experiences {
+  flex: 1 1 60%;
+  margin-right: 50px;
+}
+
+.experiences-header {
+  color: var(--secondary-text-color);
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.experiences-company-header-durability {
+  color: var(--durability-text-color);
+  text-align: left;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.experiences-company-header-name {
+  color: var(--primary-text-color);
+  text-decoration-color: var(--text-decoration-color);
+  text-decoration-line: underline;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.experiences-company-project {
+  margin-left: 15px;
+  margin-bottom: 25px;
+}
+
+.experiences-company-project-role {
+  color: var(--durability-text-color);
+  text-align: left;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.experiences-company-project-name {
+  color: var(--primary-text-color);
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.experiences-company-project-responsibilities {
+  color: var(--secondary-text-color);
+  padding-left: 20px;
+}
+
+.additional-info {
+  flex: 1 1 40%;
+}
+
+.additional-info-education {
+  margin-bottom: 20px;
+}
+
+.additional-info-education-header {
+  color: var(--secondary-text-color);
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.additional-info-education-university-durability {
+  color: var(--durability-text-color);
+  text-align: left;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.additional-info-education-university-speciality {
+  color: var(--primary-text-color);
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.additional-info-education-university-name {
+  color: var(--secondary-text-color);
+}
+
+.additional-info-languages {
+  margin-bottom: 20px;
+}
+
+.additional-info-languages-header {
+  color: var(--secondary-text-color);
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.additional-info-languages-item {
+  color: var(--secondary-text-color);
+}
